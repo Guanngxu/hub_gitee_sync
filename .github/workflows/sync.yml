@@ -1,11 +1,24 @@
-steps:
-- name: Mirror Guanngxu's Github repos to Gitee.
-  uses: Guanngxu/hub_gitee_sync@main
-  with:
-    src: github/Guanngxu
-    dst: gitee/Guanngxu
-    dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
-    dst_token: ${{ secrets.GITEE_TOKEN }}
-    account_type: org
-    # src_account_type: org
-    # dst_account_type: org
+name: Mirror GitHub Selected Repos to Gitee
+
+on:
+  push:
+    branchs:
+    - master
+    schedule:
+    # 每天上午七点定时同步（北京时间）
+    - cron:  '0 7 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Mirror Guanngxu's Github repos to Gitee.
+      uses: Guanngxu/hub_gitee_sync@master
+      with:
+        src: github/Guanngxu
+        dst: gitee/Guanngxu
+        dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+        dst_token: ${{ secrets.GITEE_TOKEN }}
+        account_type: org
+        # src_account_type: org
+        # dst_account_type: org
