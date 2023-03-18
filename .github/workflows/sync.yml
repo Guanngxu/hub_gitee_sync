@@ -1,0 +1,11 @@
+steps:
+- name: Mirror Guanngxu's Github repos to Gitee.
+  uses: Guanngxu/hub_gitee_sync@main
+  with:
+    src: github/Guanngxu
+    dst: gitee/Guanngxu
+    dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+    dst_token: ${{ secrets.GITEE_TOKEN }}
+    account_type: org
+    # src_account_type: org
+    # dst_account_type: org
