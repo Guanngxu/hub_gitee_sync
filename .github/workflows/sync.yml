@@ -23,4 +23,4 @@ jobs:
         clone_style: ssh
         force_update: true
         debug: true
-        black_list: "hello-algo,hub-mirror-action,nowcoder,mengxiaoxu"
+        black_list: "hello-algo,hub_gitee_sync,nowcoder,mengxiaoxu"
