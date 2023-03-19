@@ -23,5 +23,4 @@ jobs:
         clone_style: ssh
         force_update: true
         debug: true
-        # src_account_type: org
-        # dst_account_type: org
+        black_list: "hello-algo,hub-mirror-action,nowcoder,mengxiaoxu"
