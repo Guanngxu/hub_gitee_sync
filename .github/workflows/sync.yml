@@ -22,5 +22,5 @@ jobs:
         account_type: user
         clone_style: ssh
         force_update: true
-        debug: true
+        # debug: true
         black_list: "hello-algo,hub_gitee_sync,nowcoder,mengxiaoxu"
