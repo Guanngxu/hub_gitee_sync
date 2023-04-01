@@ -5,8 +5,8 @@ on:
     branchs:
     - master
     schedule:
-    # 每天上午七点定时同步（北京时间）
-    - cron:  '0 7 * * *'
+    # 每天上午七点定时同步
+    - cron:  '0 0 7 * * ?'
 
 jobs:
   build:
